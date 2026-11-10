@@ -9,13 +9,16 @@ npm run dev      # http://localhost:8090
 npm run build
 ```
 
-- Content/data: `src/lib/content.ts`
-- Components: `src/components/landing/` (`TopNav`, `Hero`, `Products`, `Footer`)
+- Content/data: `src/lib/content.ts` (mirrors production `apps/landing` on `development`)
+- Components: `src/components/landing/` (`TopNav`, `Hero`, `DemoHubLink`, `Products`, `Footer`)
 - Theme: `src/theme.tsx` (toggles `.dark`; default light)
 - Design rules for AI skills: `DESIGN.md`; product brief: `PRODUCT.md`
 
-This is a **reference build** — product links are placeholders (`href="#"`); the real redirects
-(and the "Talk to an Expert" / Sign-in flows) are wired later.
+Hub links are the production subpaths (`/dealer-hub/`…), so they only resolve on gostrata.app.
+
+Prototype-only switches:
+- `?hubs=5` (or any N) pads the hubs list with placeholder hubs (`src/lib/preview.ts`).
+- `VITE_DEMO_HUB_URL=https://demo-qa.gostrata.app npm run dev` shows the Demo Hub link.
 
 ## Design skills (professional polish, bound to the Strata DS)
 

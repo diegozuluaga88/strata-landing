@@ -1,10 +1,12 @@
+import { getDemoHubUrl } from '../../lib/content'
 import { useTheme } from '../../theme'
 import logoLight from '../../assets/logo-light-brand.png'
 import logoDark from '../../assets/logo-dark-brand.png'
 
-export default function Footer() {
+export function Footer() {
   const { theme } = useTheme()
   const isDark = theme === 'dark'
+  const demoHubUrl = getDemoHubUrl()
 
   return (
     <footer className="border-t border-border">
@@ -16,23 +18,26 @@ export default function Footer() {
           </span>
         </div>
         <nav className="flex items-center gap-5 text-xs text-muted-foreground">
-          <a
-            href="https://dev-strata.orderbahn.com/quote-converter/login?returnTo=%2F"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-foreground"
-          >
+          <a href="/quote-converter/" className="transition-colors hover:text-foreground">
             Quote Converter
           </a>
-          <a
-            href="https://dev-strata.orderbahn.com/smart-comparator/login?returnTo=%2F"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-foreground"
-          >
-            Hub Experience
+          <a href="/expert-hub/" className="transition-colors hover:text-foreground">
+            Expert Hub
           </a>
-          <span>© 2026 Strata</span>
+          <a href="/dealer-hub/" className="transition-colors hover:text-foreground">
+            Dealer Hub
+          </a>
+          {demoHubUrl && (
+            <a
+              href={demoHubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-foreground"
+            >
+              Demo Hub
+            </a>
+          )}
+          <span>© {new Date().getFullYear()} Strata</span>
         </nav>
       </div>
     </footer>
