@@ -2,8 +2,10 @@
 
 ## What this is
 A **reference landing page** for Strata. Minimalist, single-viewport-first, English copy,
-light theme by default with a dark toggle. It explains the Strata ecosystem and presents two
-products. Links/redirects are placeholders — wired later. No "Talk to an Expert" / Calendly yet.
+light theme by default with a dark toggle. It explains the Strata ecosystem and presents the
+Strata hubs. Production (gostrata.app, `apps/landing` in the product repo) was built from this
+prototype; the prototype now mirrors production's `development` branch, so layout work is done
+here first. No "Talk to an Expert" / Calendly yet.
 
 ## What Strata is
 Strata is **not new software** — it is an **AI layer** that sits on top of the systems a contract
@@ -23,15 +25,12 @@ is automated; experts only handle the real exceptions. It lives inside the tools
 2. **Automation first** — routine work resolves itself; experts handle only real exceptions.
 3. **Lives in your tools** — inside Outlook, Teams and Excel.
 
-## Products on the page
-### Quote Converter
-*From RFQ to structured quote — automatically.* AI reads any RFQ PDF or email, extracts every line
-item, matches it to your catalog and drafts a quote with your pricing rules. No copy-paste.
-
-### Smart Comparator
-*Acknowledgments checked against your POs in seconds.* AI agents compare every field on a vendor
-acknowledgment to your PO, auto-resolve routine differences and escalate only what needs a human.
+## Hubs on the page
+One list in `src/lib/content.ts` (`products`), same copy and links as production:
+Quote Converter, Expert Hub, Dealer Hub and Manufacturer Hub. More hubs are coming, so the hubs
+section must take any number of entries without layout changes. Under the hero, an optional
+"See Strata in action" link opens the Demo Hub when `VITE_DEMO_HUB_URL` is set.
 
 ## Out of scope (this build)
-Expert Hub, real auth/links, "Talk to an Expert" and Calendly CTAs, any numeric stats, dashboard
-mockups, charts, or photography.
+Real auth, "Talk to an Expert" and Calendly CTAs, any numeric stats, dashboard mockups, charts,
+and copy changes to hub names, links or text.

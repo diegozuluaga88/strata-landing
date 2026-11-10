@@ -1,18 +1,15 @@
 import { ArrowRightIcon, CheckIcon } from '@heroicons/react/24/outline'
-import { products } from '../../lib/content'
+import { products } from '../../lib/preview'
 
-export default function Products() {
+export function Products() {
   return (
     <div className="anim-fadeup anim-delay-2 relative overflow-hidden rounded-3xl">
-      {/* Login reference: isometric backdrop — light blur so it stays recognizable */}
       <div
         className="absolute inset-0 scale-105 bg-[url('/login-bg.jpg')] bg-cover bg-center blur-[2px]"
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
 
-      {/* text-legible adds a subtle shadow scrim so light text stays AA-legible
-          over the now-more-visible image, without darkening the cards. */}
       <div className="text-legible relative p-4 sm:p-5">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-white/80">
           The system in action
@@ -24,7 +21,6 @@ export default function Products() {
               key={product.name}
               className="group rounded-2xl border border-white/10 bg-black/40 p-4 backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-white/25 hover:bg-black/55"
             >
-              {/* Lime accent marker — decorative, fully rounded */}
               <span className="mb-3 block h-1 w-8 rounded-full bg-primary" aria-hidden="true" />
 
               <div className="flex items-start gap-3">
@@ -52,8 +48,7 @@ export default function Products() {
 
               <a
                 href={product.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                aria-label={`Open ${product.name}`}
                 className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Open {product.name}

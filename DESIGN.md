@@ -21,10 +21,10 @@ brand as text. Always use semantic tokens.
 | Token | Light | Dark | Use |
 |---|---|---|---|
 | `bg-background` | `#EBECEE` | `#02060C` | page root |
-| `bg-card` | `#fafafa` | `#02060C` | cards/panels (border-defined in dark) |
+| `bg-card` | `#fafafa` | `#0B0F1A` | cards/panels (border-defined in dark) |
 | `bg-muted` / `bg-secondary` / `bg-accent` | `#fafafa` | `#141E2C` | raised/hover surfaces |
 | `text-foreground` | `#02060C` | `#EBECEE` | body & headings |
-| `text-muted-foreground` | `#959DA7` | `#B4BBC2` | secondary text |
+| `text-muted-foreground` | `#616A76` | `#B4BBC2` | secondary text |
 | `bg-primary` | `#E6F993` | `#C3E433` | primary CTA / lime accent |
 | `text-primary-foreground` | `#02060C` | `#02060C` | text/icon on lime |
 | `border-border` | `#D0D4D8` | `#141E2C` | 1px borders |
